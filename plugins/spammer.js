@@ -328,11 +328,6 @@ guiBtn.onclick = function() {
 myBtn.appendChild(guiBtn);
 
 //-----------------------
-let DataList = document.createElement("div");
-DataList.innerHTML = `<div></div><div id="Texto1" class="custom">&nbsp;&nbsp;&nbsp;WA Toolkit By Raz&nbsp;&nbsp;&nbsp;</div></div><style>.custom { text-align: center; color: rgb(0 149 136); } .ByRaz { margin: 4px }</style>`
-DataList.className = "ByRaz"
-document.getElementsByClassName("uwk68")[0].appendChild(DataList);
-//-----------------------
 
 //Creds
 injectTKCss("Creds", `custom {
