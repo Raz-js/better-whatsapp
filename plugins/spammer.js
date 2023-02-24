@@ -317,16 +317,21 @@ function ls8sdajw8asjdia(text, options = {}) {
 }
 
 //SendMessage Const
-function sendTKMsg(text) {
-    var input = document.querySelector('#main [contenteditable~=true]');
-    setTimeout(() => {
-        input.innerHTML = text;
-        input.dispatchEvent(new Event('input', {
-            bubbles: true
-        }));
-        var button = document.querySelector('button>span[data-icon="send"]').parentElement;
-        button.click();
-    }, 500);
+function sendTKMsg(text){
+  const mainEl = document.querySelector('#main')
+  const textareaEl = mainEl.querySelector('div[contenteditable="true"]')
+
+  if(!textareaEl) {
+    throw new Error('There is no opened conversation')
+  }
+
+  textareaEl.focus()
+  document.execCommand('insertText', false, text)
+  textareaEl.dispatchEvent(new Event('change', { bubbles: true }))
+
+  setTimeout(() => {
+    (mainEl.querySelector('[data-testid="send"]') || mainEl.querySelector('[data-icon="send"]')).click()
+  }, 100)
 }
 
 //Main-Button
