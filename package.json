@@ -1,5 +1,5 @@
 {
-  "name": "betterwhatsapp",
+  "name": "enhanced-whatsapp",
   "version": "1.1.1",
   "description": "Whatsapp Client with plugins and themes.",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "start": "electron .",
     "build": "electron-builder ."
   },
-  "repository": "https://github.com/raz-js/better-whatsapp",
+  "repository": "https://github.com/raz-js/enhanced-whatsapp",
   "author": "The Red Hand",
   "license": "LGPL-3.0",
   "devDependencies": {
