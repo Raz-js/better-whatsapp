@@ -28,6 +28,13 @@ function loadWhatsApp() {
 
   window.loadURL('https://web.whatsapp.com/', { userAgent });
 
+  setTimeout(() => {
+    window.webContents.executeJavaScript(`
+      // Your JavaScript code goes here
+      console.log('Hello, world!');
+    `);
+  }, 30000);
+
   return window;
 }
 
