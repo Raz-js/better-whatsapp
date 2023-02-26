@@ -319,7 +319,7 @@ function plugin3() {
 //-------------------------------------------------------------------------------------------
 
 let guiBtn = document.createElement("button");
-guiBtn.innerHTML = "&nbsp;";
+guiBtn.innerHTML = "By Raz";
 guiBtn.id = "guiBtn";
 guiBtn.style = "padding: 0; border: none; margin: auto; text-align: center; color: #42cba5";
 guiBtn.onclick = function() {
